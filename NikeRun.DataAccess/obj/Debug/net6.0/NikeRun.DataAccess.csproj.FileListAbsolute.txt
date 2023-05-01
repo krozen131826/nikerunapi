@@ -1,0 +1,17 @@
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\NikeRun.DataAccess.csproj.AssemblyReference.cache
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\NikeRun.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\NikeRun.DataAccess.AssemblyInfoInputs.cache
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\NikeRun.DataAccess.AssemblyInfo.cs
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\NikeRun.DataAccess.csproj.CoreCompileInputs.cache
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\bin\Debug\net6.0\NikeRun.DataAccess.deps.json
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\bin\Debug\net6.0\NikeRun.DataAccess.dll
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\bin\Debug\net6.0\NikeRun.DataAccess.pdb
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\bin\Debug\net6.0\NikeRun.Application.dll
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\bin\Debug\net6.0\NikeRun.Domain.dll
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\bin\Debug\net6.0\NikeRun.Application.pdb
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\bin\Debug\net6.0\NikeRun.Domain.pdb
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\NikeRun.DataAccess.csproj.CopyComplete
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\NikeRun.DataAccess.dll
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\refint\NikeRun.DataAccess.dll
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\NikeRun.DataAccess.pdb
+D:\Practice\dotnet\NikeRun.API\NikeRun.DataAccess\obj\Debug\net6.0\ref\NikeRun.DataAccess.dll

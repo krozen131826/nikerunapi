@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "zC4M8vds1hvbNh8DKXOKCJWfX2b+Vq+KZLKxrOwq3+A=",
+  "Source": "NikeRun.WebAPI",
+  "BasePath": "_content/NikeRun.WebAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

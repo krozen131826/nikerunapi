@@ -1,0 +1,12 @@
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\bin\Debug\net6.0\NikeRun.Domain.deps.json
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\bin\Debug\net6.0\NikeRun.Domain.dll
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\bin\Debug\net6.0\NikeRun.Domain.pdb
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\NikeRun.Domain.csproj.AssemblyReference.cache
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\NikeRun.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\NikeRun.Domain.AssemblyInfoInputs.cache
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\NikeRun.Domain.AssemblyInfo.cs
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\NikeRun.Domain.csproj.CoreCompileInputs.cache
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\NikeRun.Domain.dll
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\refint\NikeRun.Domain.dll
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\NikeRun.Domain.pdb
+D:\Practice\dotnet\NikeRun.API\NikeRun.Domain\obj\Debug\net6.0\ref\NikeRun.Domain.dll

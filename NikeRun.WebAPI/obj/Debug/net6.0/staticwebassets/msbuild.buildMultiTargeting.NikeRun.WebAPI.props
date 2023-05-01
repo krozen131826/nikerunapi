@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\NikeRun.WebAPI.props" />
+</Project>
