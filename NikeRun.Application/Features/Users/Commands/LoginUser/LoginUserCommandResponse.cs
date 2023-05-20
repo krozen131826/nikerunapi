@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Users.Commands.LoginUser
 {
-    public class LoginUserCommandResponse : BaseResponseModel
+    public class LoginUserCommandResponse : BaseResponseModel<LoginResponseDto>
     {
         public LoginUserCommandResponse():base()
         {

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using NikeRun.Domain.Dtos.Users;
+using NikeRun.Domain.Models.Response;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,5 +9,5 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Users.Commands.LoginUser
 {
-    public record LoginUserCommand(LoginUserRequestDto request) : IRequest<LoginUserCommandResponse>;
+    public record LoginUserCommand(LoginUserRequestDto request) : IRequest<BaseResponseModel<LoginResponseDto>>;
 }

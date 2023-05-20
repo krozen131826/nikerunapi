@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Products.Queries.GetProductList;
-public class GetProductListQueryResponse : BaseResponseModel
+public class GetProductListQueryResponse : BaseResponseModel<ProductsDto>
 {
     public GetProductListQueryResponse() : base()
     {

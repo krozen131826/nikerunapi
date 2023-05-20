@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Carts.Commands.AddToCart
 {
-    public class AddToCartCommandResponse : BaseResponseModel
+    public class AddToCartCommandResponse : BaseResponseModel<string>
     {
         public AddToCartCommandResponse() :base()
         {

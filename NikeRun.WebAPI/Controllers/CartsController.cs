@@ -36,7 +36,7 @@ namespace NikeRun.WebAPI.Controllers
         }
 
         [HttpPost("addToCart")]
-        public async Task<ActionResult<BaseResponseModel>> AddToCart(AddToCartDto cart)
+        public async Task<ActionResult<BaseResponseModel<string>>> AddToCart(AddToCartDto cart)
         {
 
             var email = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress")?.Value;
@@ -50,7 +50,7 @@ namespace NikeRun.WebAPI.Controllers
         }
 
         [HttpPatch("update/{cartId}")]
-        public async Task<ActionResult<BaseResponseModel>> UserCartQuantityUpdate(int cartId,JsonPatchDocument<UpdateCartDto> patchDocument)
+        public async Task<ActionResult<BaseResponseModel<string>>> UserCartQuantityUpdate(int cartId,JsonPatchDocument<UpdateCartDto> patchDocument)
         {
             var userId = Convert.ToInt32(HttpContext.User.Claims.FirstOrDefault(c => c.Type == "Id")?.Value);
 

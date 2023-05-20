@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Users.Queries.GetUserById
 {
-    public class GetUserByEmailResponse : BaseResponseModel
+    public class GetUserByEmailResponse : BaseResponseModel<UserDetailsDto>
     {
         public GetUserByEmailResponse() : base()
         {
             
         }
 
-        public GetUserDetailsDto GetUserDetailsDto { get; set; } = new GetUserDetailsDto();
+        public UserDetailsDto UserDetailsDto { get; set; } = new UserDetailsDto();
 
     }
 }

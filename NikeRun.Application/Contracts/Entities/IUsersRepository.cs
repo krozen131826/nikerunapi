@@ -11,7 +11,7 @@ namespace NikeRun.Application.Contracts.Entities
 {
     public interface IUsersRepository : IGenericRepository<Users>
     {
-        Task<BaseResponseModel> RegisterAsync(Users Users, string password);
+        Task<BaseResponseModel<string>> RegisterAsync(Users Users, string password);
         Task<LoginResponseDto> LoginUser(Users user);
         Task<bool> isUserExist(string email);
         Task<Users> GetUserByEmail(string email);

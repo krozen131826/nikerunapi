@@ -41,7 +41,7 @@ public class UsersRepository : GenericRepository<Users>, IUsersRepository
 
     }
 
-    public async Task<BaseResponseModel> RegisterAsync(Users Users, string password)
+    public async Task<BaseResponseModel<string>> RegisterAsync(Users Users, string password)
     {
         CreatePasswordHash(password, out byte[] passwordHash, out byte[] passwordSalt);
 
@@ -52,7 +52,7 @@ public class UsersRepository : GenericRepository<Users>, IUsersRepository
         await _dbContext.Users.AddAsync(Users);
         await _dbContext.SaveChangesAsync();
 
-        return new BaseResponseModel();
+        return new BaseResponseModel<string>();
 
     }
 

@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using NikeRun.Application.Features.Products.Queries.GetProductList;
@@ -8,6 +9,7 @@ namespace NikeRun.WebAPI.Controllers
 {
     [Route("api/products")]
     [ApiController]
+    [Authorize]
     public class ProductsController : ControllerBase
     {
         private readonly IMediator _mediatr;
@@ -18,7 +20,7 @@ namespace NikeRun.WebAPI.Controllers
         }
 
         [HttpGet("list")]
-        public async Task<ActionResult<BaseResponseModel>> GetProductList()
+        public async Task<ActionResult<BaseResponseModel<string>>> GetProductList()
         {
             var productListDto = await _mediatr.Send(new GetProductListQuery());
 

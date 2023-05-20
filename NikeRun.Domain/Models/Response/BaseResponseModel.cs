@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Domain.Models.Response
 {
-    public class BaseResponseModel
+    public class BaseResponseModel<T>
     {
         public BaseResponseModel()
         {
@@ -24,8 +24,8 @@ namespace NikeRun.Domain.Models.Response
             Message = message;
         }
 
+        public T? Data { get; set; }
         public bool Success { get; set; }
         public string Message { get; set; } = string.Empty;
-        public List<string>? ValidationErrors { get; set; }
     }
 }

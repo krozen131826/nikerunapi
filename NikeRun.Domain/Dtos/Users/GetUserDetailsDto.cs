@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Domain.Dtos.Users
 {
-    public class GetUserDetailsDto
+    public class UserDetailsDto
     {
         public string FirstName { get; set; } = string.Empty;
         public string LastName { get; set; } = string.Empty;

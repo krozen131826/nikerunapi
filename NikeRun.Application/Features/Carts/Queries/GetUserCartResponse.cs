@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Carts.Queries
 {
-    public class GetUserCartResponse : BaseResponseModel
+    public class GetUserCartResponse : BaseResponseModel<CartDto>
     {
         public GetUserCartResponse() : base()
         {

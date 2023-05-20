@@ -27,17 +27,17 @@ namespace NikeRun.WebAPI.Controllers
 
         [HttpPost("login")]
         [AllowAnonymous]
-        public async Task<ActionResult<BaseResponseModel>> LoginUser(LoginUserRequestDto request)
+        public async Task<ActionResult<BaseResponseModel<LoginResponseDto>>> LoginUser(LoginUserRequestDto request)
         {
-            var result = await _mediatr.Send(new LoginUserCommand(request));
+            var loginResponse = await _mediatr.Send(new LoginUserCommand(request));
 
-            return Ok(result);
+            return Ok(loginResponse);
         }
 
 
         [HttpPost("register")]
         [AllowAnonymous]
-        public async Task<ActionResult<BaseResponseModel>> RegisterUser(RegisterUserRequestDto request)
+        public async Task<ActionResult<BaseResponseModel<string>>> RegisterUser(RegisterUserRequestDto request)
         {
             var result = await _mediatr.Send(new RegisterUserCommand(request));
 
@@ -45,18 +45,18 @@ namespace NikeRun.WebAPI.Controllers
         }
 
         [HttpGet("userDetails")]
-        public async Task<ActionResult<BaseResponseModel>> GetUserDetails()
+        public async Task<ActionResult<BaseResponseModel<UserDetailsDto>>> GetUserDetails()
         {
 
             var email = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress")?.Value;
 
-            var result = await _mediatr.Send(new GetUsersByEmailQuery(email!));
+            var userDetailsResponse = await _mediatr.Send(new GetUsersByEmailQuery(email!));
 
-            return Ok(result);
+            return Ok(userDetailsResponse);
         }
 
         [HttpPatch("patch/update")]
-        public async Task<ActionResult<BaseResponseModel>> UpdateUserDetails(JsonPatchDocument<UserUpdateRequestDto> patchDocument) 
+        public async Task<ActionResult<BaseResponseModel<string>>> UpdateUserDetails(JsonPatchDocument<UserUpdateRequestDto> patchDocument) 
         {
 
             var email = HttpContext.User.Claims.FirstOrDefault(c => c.Type == "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress")?.Value;

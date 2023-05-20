@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Users.Commands.RegisterUser
 {
-    public class RegisterUserCommandResponse : BaseResponseModel
+    public class RegisterUserCommandResponse : BaseResponseModel<string>
     {
         public RegisterUserCommandResponse() : base() 
         {

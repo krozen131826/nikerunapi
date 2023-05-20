@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Users.Commands.UpdateUser
 {
-    public class UpdateUserCommandResponse : BaseResponseModel
+    public class UpdateUserCommandResponse : BaseResponseModel<string>
     {
         public UpdateUserCommandResponse() :base()
         {

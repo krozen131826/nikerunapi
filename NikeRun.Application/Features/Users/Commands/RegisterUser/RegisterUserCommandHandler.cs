@@ -2,6 +2,8 @@
 using FluentValidation;
 using MediatR;
 using NikeRun.Application.Contracts.Entities;
+using NikeRun.Application.Exception;
+using NikeRun.Domain.Models.Response;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,7 +14,7 @@ using System.Threading.Tasks;
 
 namespace NikeRun.Application.Features.Users.Commands.RegisterUser
 {
-    internal sealed class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, RegisterUserCommandResponse>
+    internal sealed class RegisterUserCommandHandler : IRequestHandler<RegisterUserCommand, BaseResponseModel<string>>
     {
         private readonly IMapper _mapper;
         private readonly IUsersRepository _usersRepository;
@@ -22,32 +24,28 @@ namespace NikeRun.Application.Features.Users.Commands.RegisterUser
             _mapper = mapper;
             _usersRepository = usersRepository;
         }
-        public async Task<RegisterUserCommandResponse> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
-        {
-            var registerUserCommandResponse = new RegisterUserCommandResponse();
 
+        public async Task<BaseResponseModel<string>> Handle(RegisterUserCommand request, CancellationToken cancellationToken)
+        {
+            var baseResponseModel = new BaseResponseModel<string>();
             var validators = new RegisterUserCommandValidator(_usersRepository);
 
-            var validationResults =  await validators.ValidateAsync(request);
+            var validationResults = await validators.ValidateAsync(request);
 
             if (validationResults.Errors.Count() > 0)
             {
-                registerUserCommandResponse.Success = false;
-                registerUserCommandResponse.ValidationErrors = new List<string>();
-
-                foreach (var errors in validationResults.Errors)
-                {
-                    registerUserCommandResponse.ValidationErrors.Add(errors.ErrorMessage);
-                }
+                throw new ValidationErrorsException(validationResults);
             }
-            if (registerUserCommandResponse.Success) {
+            if (baseResponseModel.Success)
+            {
 
-                registerUserCommandResponse.Message = "Registration Successfull";
+                baseResponseModel.Message = "Registration Successfull";
                 var userMapped = _mapper.Map<Domain.Entities.Users>(request.request);
                 await _usersRepository.RegisterAsync(userMapped, request.request.Password);
             }
 
-            return registerUserCommandResponse;
+            return baseResponseModel;
         }
+
     }
 }
